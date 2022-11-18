@@ -7,4 +7,94 @@
     tools:context=".RegistroActivity"
     android:background="@color/black">
 
+    <TextView
+        android:id="@+id/tvTituloRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/registro_titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/primary"
+        android:fontFamily="@font/wallpoet_regular"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/etRegistroNombre"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/primary"
+        android:hint="@string/registro_hint_nombre"
+        android:textColor="@color/white"
+        android:textColorHint="@color/secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloRegistro" />
+
+    <EditText
+        android:id="@+id/etRegistroEmail"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etRegistroNombre"
+        android:layout_margin="20dp"
+        android:textColorHint="@color/secondary"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primary"
+        android:hint="@string/registro_hint_email"/>
+
+    <EditText
+        android:id="@+id/etRegistroTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etRegistroEmail"
+        android:layout_margin="20dp"
+        android:textColorHint="@color/secondary"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primary"
+        android:hint="@string/registro_hint_telefono"/>
+
+    <EditText
+        android:id="@+id/etRegistroContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etRegistroTelefono"
+        android:layout_margin="20dp"
+        android:textColorHint="@color/secondary"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primary"
+        android:hint="@string/registro_hint_contrasena"/>
+
+    <EditText
+        android:id="@+id/etRegistroConfirmarContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etRegistroContrasena"
+        android:layout_margin="20dp"
+        android:textColorHint="@color/secondary"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primary"
+        android:hint="@string/registro_hint_confirmar_contrasena"/>
+
+    <Button
+        android:id="@+id/bRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/registro_boton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etRegistroConfirmarContrasena" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
