@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuMainHistorial"
+        android:title="@string/menu_plataformas_historial" />
+    <item
+        android:id="@+id/menuMainAyuda"
+        android:title="@string/menu_plataformas_ayuda" />
+    <item
+        android:id="@+id/menuMainAcercaDe"
+        android:title="@string/menu_plataformas_acercade" />
+</menu>

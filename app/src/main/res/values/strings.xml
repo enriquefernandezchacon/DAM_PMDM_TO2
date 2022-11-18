@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">PMDM02_EnriqueFernandez</string>
+
+    <!--MAIN ACTIVITY-->
+    <string name="main_boton_iniciar">INICIAR</string>
+    <string name="main_logo_content_description">Logo de Pirate Studio</string>
+
+    <!--LOGIN ACTIVITY-->
+    <string name="login_textview_iniciarsesion">Iniciar Sesión:</string>
+    <string name="login_edittext_placeholder_usuario">Usuario</string>
+    <string name="login_edittext_placeholder_contrasena">Contraseña</string>
+    <string name="login_edittext_usuario_userpredeterminado">pirate@studio.com</string>
+    <string name="login_boton">INICIO</string>
+    <string name="login_registro">Registro</string>
+
+    <!--RECICLER VIEW-->
+    <string name="recicler_row_plataforma_titulo">TITULO DE LA PLATAFORMA</string>
+    <string name="recicler_row_plataforma_titulo_description">Titulo de la plataforma</string>
+
+    <!--MENU PLATAFORMAS-->
+    <string name="menu_plataformas_historial">Historial</string>
+    <string name="menu_plataformas_ayuda">Ayuda</string>
+    <string name="menu_plataformas_acercade">Acerca De</string>
+    <string name="dialogo_acercade_datos_colegio">I.E.S Al-Ándalus\n2º DAM - Horas de Libre Configuración\nProfesor: Juan Pedro Martinez</string>
+    <string name="dialogo_acercade_nombre_autor">Enrique Octavio Fernández Chacón</string>
+    <string name="dialogo_ayuda_titulo">AYUDA</string>
+    <string name="dialogo_ayuda_texto">Si desea obtener ayuda\ncontáctenos a través\ndel correo:\nsoporte@piratestudio.com</string>
+
+</resources>
