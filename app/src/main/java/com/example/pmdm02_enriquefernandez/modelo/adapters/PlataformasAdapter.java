@@ -3,7 +3,6 @@ package com.example.pmdm02_enriquefernandez.modelo.adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,7 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pmdm02_enriquefernandez.R;
-import com.example.pmdm02_enriquefernandez.modelo.dominio.Plataforma;
+import com.example.pmdm02_enriquefernandez.modelo.dominio.plataforma.Plataforma;
 
 import java.util.List;
 

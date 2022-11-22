@@ -18,4 +18,9 @@ public class Login {
     public static boolean comprobarUsuario(String tryUser) {
         return tryUser.equals(user);
     }
+
+    public static boolean usuarioExistente(String correo) {
+        /*AQUI IMPLEMENTARIAMOS EL CODIGO PARA COMPROBAR SI EL USUARIO YA ESTA REGISTRADO*/
+        return  correo.equals(user);
+    }
 }

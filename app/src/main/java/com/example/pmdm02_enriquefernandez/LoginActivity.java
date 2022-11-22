@@ -44,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         tvRegistro.setOnClickListener(view -> {
             Intent intent = new Intent(this, RegistroActivity.class);
             startActivity(intent);
+            finish();
         });
     }
 }

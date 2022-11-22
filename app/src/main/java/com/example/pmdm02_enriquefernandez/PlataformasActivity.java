@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.pmdm02_enriquefernandez.modelo.adapters.PlataformasAdapter;
-import com.example.pmdm02_enriquefernandez.modelo.dominio.Plataforma;
+import com.example.pmdm02_enriquefernandez.modelo.dominio.plataforma.Plataforma;
 import com.example.pmdm02_enriquefernandez.modelo.negocio.Plataformas;
 
 public class PlataformasActivity extends AppCompatActivity {
@@ -27,7 +27,7 @@ public class PlataformasActivity extends AppCompatActivity {
         LinearLayoutManager lmg = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(lmg);
 
-        Plataformas plataformas = new Plataformas();
+        Plataformas plataformas = Plataformas.getInstance();
 
         PlataformasAdapter.OnItemClickListener listener = new PlataformasAdapter.OnItemClickListener() {
             @Override
@@ -45,6 +45,7 @@ public class PlataformasActivity extends AppCompatActivity {
     public void onBackPressed(){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
