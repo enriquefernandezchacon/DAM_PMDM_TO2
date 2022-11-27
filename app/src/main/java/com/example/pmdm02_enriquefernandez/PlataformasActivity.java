@@ -21,14 +21,16 @@ public class PlataformasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plataformas);
-
+        //ASIGNO EL RECYCLER VIEW Y SU LAYOUT
         RecyclerView recyclerView = findViewById(R.id.rvPlataformas);
 
         LinearLayoutManager lmg = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(lmg);
 
+        //OBTENGO LA INSTANCIA DE PLATAFORMAS
         Plataformas plataformas = Plataformas.getInstance();
 
+        //EVENTO PARA ABRIR LA VENTANA DEL LISTADO DE PELICULAS CORRESPONDIENTE A ESA PLATAFORMA
         PlataformasAdapter.OnItemClickListener listener = new PlataformasAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Plataforma item) {
@@ -55,12 +57,14 @@ public class PlataformasActivity extends AppCompatActivity {
         return true;
     }
 
+    //CONTROLADOR DEL MENU DE OPCIONES, PARA CADA OPCIÓN SE MUESTRA SU DIALOGO O NUEVA VENTANA
+    //CORRESPONDIENTE
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
 
         if (id == R.id.menuMainHistorial){
-            //LA FUNCION DE HISTORIAL NO SERÁ DESARROLLADA EN ESTA ACTIVIDAD
-            Toast.makeText(this, "Función no desarrollada aún. Disculpe las molestias.", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, HistorialActivity.class);
+            startActivity(intent);
         } else if (id == R.id.menuMainAyuda){
             //CREAMOS EL DIALOGO QUE MUESTRE EL PANEL "AYUDA"
             Dialog dialog = new Dialog(this);

@@ -15,6 +15,7 @@ import com.example.pmdm02_enriquefernandez.modelo.dominio.Pelicula;
 
 import java.util.List;
 
+//CODIGO BASADO EN EL EJEMPLO DEL PROFESOR, EXPLICADO EN HISTORIAL ACTIVITY
 public class PeliculasAdapter extends RecyclerView.Adapter<PeliculasAdapter.myHolderView> {
 
     private final List<Pelicula> datos;
@@ -43,7 +44,7 @@ public class PeliculasAdapter extends RecyclerView.Adapter<PeliculasAdapter.myHo
     public void onBindViewHolder(@NonNull PeliculasAdapter.myHolderView holder, int position) {
         holder.titulo.setText(datos.get(position).getTitulo());
         holder.ivPortada.setImageResource(datos.get(position).getPortada());
-        holder.ivRating.setImageResource(getImagenRating(datos.get(position).getPuntuación()));
+        holder.ivRating.setImageResource(getImagenRating(datos.get(position).getPuntuacion()));
 
         //Al pulsar click en el contenedor lo propagamos hacia arriba al escuchador que recibimos en el constructor
         holder.contenedor.setOnClickListener(new View.OnClickListener() {

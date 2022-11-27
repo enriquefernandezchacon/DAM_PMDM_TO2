@@ -5,12 +5,14 @@ import com.example.pmdm02_enriquefernandez.modelo.negocio.Peliculas;
 
 import java.util.List;
 
+//CLASE QUE CONTROLA LA LOGICA DE UNA PLATAFORMA
 public class Plataforma {
 
-    private String nombrePlataforma;
-    private int imagenPlataformaId;
-    private Peliculas listadoPeliculas;
-    private IdPlataforma id;
+    //ATRIBUTOS DE LA CLASE
+    private final String nombrePlataforma;
+    private final int imagenPlataformaId;
+    private final Peliculas listadoPeliculas;
+    private final IdPlataforma id;
 
     public Plataforma(int imagenId, IdPlataforma id) {
         this.nombrePlataforma = id.toString();
@@ -22,10 +24,6 @@ public class Plataforma {
     public void AgregarPelicula(Pelicula pelicula) {
         pelicula.setIdPlataforma(id);
         listadoPeliculas.AgregarPelicula(pelicula);
-    }
-
-    public Pelicula getPelicula(int id) {
-        return listadoPeliculas.getPelicula(id);
     }
 
     public List<Pelicula> getAllPeliculas() {

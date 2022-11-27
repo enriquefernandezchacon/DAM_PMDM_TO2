@@ -23,15 +23,16 @@ public class RegistroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
-
+        //ASIGNO LOS ELEMENTOS
         bRegistro = findViewById(R.id.bRegistro);
         etNombre = findViewById(R.id.etRegistroNombre);
         etEmail = findViewById(R.id.etRegistroEmail);
         etTelefono = findViewById(R.id.etRegistroTelefono);
         etContrasena = findViewById(R.id.etRegistroContrasena);
         etConfirmarContrasena = findViewById(R.id.etRegistroConfirmarContrasena);
-
+        //EVENTO CLIC DEL BOTON DE REGISTRO
         bRegistro.setOnClickListener(view -> {
+            //CENTINELA DE VALIDACION
             Boolean centinela = true;
 
             if (etNombre.getText().toString().trim().isEmpty()) {

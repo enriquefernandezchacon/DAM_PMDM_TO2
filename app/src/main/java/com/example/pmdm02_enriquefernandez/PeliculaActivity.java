@@ -11,15 +11,21 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.pmdm02_enriquefernandez.modelo.dominio.Pelicula;
+import com.example.pmdm02_enriquefernandez.modelo.dominio.Visualizacion;
+import com.example.pmdm02_enriquefernandez.modelo.negocio.Historial;
 
 public class PeliculaActivity extends AppCompatActivity {
 
     private Pelicula pelicula;
+    private boolean primeraReproduccion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pelicula);
+        //CENTINELA PARA EL HISTORIAL DE REPRODUCCION
+        primeraReproduccion = true;
 
+        //CARGO CADA DATO EN SU ELEMENTO CORRESPONDIENTE
         Intent intent = getIntent();
         pelicula = (Pelicula) intent.getSerializableExtra("PELICULA");
 
@@ -27,7 +33,7 @@ public class PeliculaActivity extends AppCompatActivity {
         portada.setImageResource(pelicula.getPortada());
 
         ImageView rating = findViewById(R.id.ivPeliculaRating);
-        rating.setImageResource(getImagenRating(pelicula.getPuntuación()));
+        rating.setImageResource(getImagenRating(pelicula.getPuntuacion()));
 
         TextView titulo = findViewById(R.id.tvPeliculaTitulo);
         titulo.setText(pelicula.getTitulo());
@@ -45,9 +51,17 @@ public class PeliculaActivity extends AppCompatActivity {
         sinopsis.setText(pelicula.getSinopsis());
 
         Button btPlay = findViewById(R.id.btPeliculaPlay);
+        //EVENTO DE CLIC PARA REPRODUCIR
         btPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //SI ES LA PRIMERA VEZ, LO GUARDA EN EL HISTORIAL
+                if (primeraReproduccion) {
+                    Historial historial = Historial.getInstance();
+                    historial.AgregarVisualizacion(new Visualizacion(pelicula));
+                    primeraReproduccion = false;
+                }
+                //ABRE UNA NUEVA VENTANA A CON LA URL DE LA PELICULA
                 Uri uri = Uri.parse(pelicula.getUrl());
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
@@ -55,6 +69,7 @@ public class PeliculaActivity extends AppCompatActivity {
         });
     }
 
+    //METODO AUXILIAR PARA OBTENER LA IMAGEN DE LAS ESTRELLAS EN FUNCION DE LA PUNTUACION
     private int getImagenRating(int puntuacion) {
         if (puntuacion == 5) {
             return R.drawable.rating5;

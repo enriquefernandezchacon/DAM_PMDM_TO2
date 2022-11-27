@@ -24,12 +24,13 @@ public class ListadoPeliculasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado_peliculas);
-
+        //ASIGNO EL RECYCLER VIEW Y CREO EL LAYOUYT DE TIPO GRID, DE 3 COLUMNAS
         rvListadoPeliculas = findViewById(R.id.rvListadoPeliculas);
 
         GridLayoutManager glm = new GridLayoutManager(getApplicationContext(),3);
         rvListadoPeliculas.setLayoutManager(glm);
 
+        //OBTENGO LA PLATAFORMA SELECCIONADA Y CARGO SUS PELICULAS
         Intent intentLlegada = getIntent();
         Plataformas plataformas = Plataformas.getInstance();
         IdPlataforma id = (IdPlataforma) intentLlegada.getSerializableExtra("PLATAFORMA");
@@ -39,6 +40,7 @@ public class ListadoPeliculasActivity extends AppCompatActivity {
         TextView titulo = findViewById(R.id.tvListadoPeliculaTitulo);
         titulo.setText("PELICULAS DE " + plataforma.getNombrePlataforma().toUpperCase());
 
+        //ESTE EVENTO CARGARA "PELICULA ACTIVITY" CON LOS DATOS DE LA PELICULA SELECCIONADA
         PeliculasAdapter.OnItemClickListener listener = new PeliculasAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Pelicula item) {

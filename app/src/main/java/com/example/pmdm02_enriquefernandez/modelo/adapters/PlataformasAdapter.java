@@ -15,6 +15,7 @@ import com.example.pmdm02_enriquefernandez.modelo.dominio.plataforma.Plataforma;
 
 import java.util.List;
 
+//CODIGO BASADO EN EL EJEMPLO DEL PROFESOR, EXPLICADO EN HISTORIAL ACTIVITY
 public class PlataformasAdapter
         extends RecyclerView.Adapter<PlataformasAdapter.myHolderView> {
 

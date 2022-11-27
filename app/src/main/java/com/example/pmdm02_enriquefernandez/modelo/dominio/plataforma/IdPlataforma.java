@@ -1,5 +1,6 @@
 package com.example.pmdm02_enriquefernandez.modelo.dominio.plataforma;
 
+//ENUM QUE CLASIFICA LAS POSIBLES PLATAFORMAS DE CONTENIDO
 public enum IdPlataforma {
     NETFLIX {
         public String toString() {
@@ -18,7 +19,7 @@ public enum IdPlataforma {
     },
     DISNEY {
         public String toString() {
-            return "Diseny+";
+            return "Disney+";
         }
     },
     DAZN {

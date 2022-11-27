@@ -8,11 +8,15 @@ import com.example.pmdm02_enriquefernandez.modelo.dominio.plataforma.Plataforma;
 import java.util.ArrayList;
 import java.util.List;
 
+//ESTA CLASE USA UN PATRÓN SINGLETON, CON ESTO ME ASEGURO QUE CUALQUIER PROCESO QUE SOLICITE UN OBJETO
+//DE ESTA CLASE, RECIBA LA MISMA REFERENCIA. ASI SE PUEDE ACCEDER A ÉL DESDE CUALQUIER PUNTO
+//FUENTE: https://refactoring.guru/design-patterns/singleton
 public class Plataformas {
 
     private final List<Plataforma> plataformas;
     private static volatile Plataformas instance;
 
+    //AL INSTANCIAR PLATAFORMAS, CREO CADA PLATAFORMA INDIVIDUALMENTE Y AÑADO 30 PELICULAS EN CADA UNA
     private Plataformas() {
         plataformas = new ArrayList<>();
         plataformas.add(new Plataforma(R.drawable.logo_netflix, IdPlataforma.NETFLIX));
@@ -64,6 +68,7 @@ public class Plataformas {
 
     }
 
+    //METODO PARA CREAR PELICULAS POR DEFECTO
     private Pelicula crearPelicula(int i) {
         String titulo;
         int puntuación;

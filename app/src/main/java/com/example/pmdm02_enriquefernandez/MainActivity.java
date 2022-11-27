@@ -9,13 +9,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
+//CONTROLADOR DE LA VISTA DE INCIO
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //SI SE CLICA EN EL BOTON, SE AVANZA A LA VIEW D ELOGIN
         Button bIniciar = findViewById(R.id.bInicio);
         bIniciar.setOnClickListener(view -> {
             Intent intent = new Intent(this, LoginActivity.class);
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //METODO PARA PEDIR CONFIRMACION AL SALIR DE LA APP
     @Override
     public void onBackPressed(){
         new AlertDialog.Builder(this)

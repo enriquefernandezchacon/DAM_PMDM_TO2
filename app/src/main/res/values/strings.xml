@@ -50,4 +50,7 @@
     <!--PELICULA ACTIVTY-->
     <string name="pelicula_boton_reproducir">REPRODUCIR</string>
     <string name="pelicula_titulo_sinopsis">SINOPSIS</string>
+
+    <!--HISTORIAL-->
+    <string name="historial_titulo">HISTORIAL DE VISUALIZACIÓN</string>
 </resources>

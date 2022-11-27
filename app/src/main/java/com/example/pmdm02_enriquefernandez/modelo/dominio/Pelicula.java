@@ -4,22 +4,23 @@ import com.example.pmdm02_enriquefernandez.modelo.dominio.plataforma.IdPlataform
 
 import java.io.Serializable;
 
+//LOGICA DE UNA PELICULA
 public class Pelicula implements Serializable {
 
     private int id;
-    private String titulo;
-    private int puntuación;
-    private int portadaId;
-    private int anoPublicacion;
-    private String director;
-    private int duracion;
-    private String sinopsis;
+    private final String titulo;
+    private final int puntuacion;
+    private final int portadaId;
+    private final int anoPublicacion;
+    private final String director;
+    private final int duracion;
+    private final String sinopsis;
     private IdPlataforma idPlataforma;
-    private String url;
+    private final String url;
 
-    public Pelicula(String titulo, int puntuación, int portadaId, int anoPublicacion, String director, int duracion, String sinopsis, String url) {
+    public Pelicula(String titulo, int puntuacion, int portadaId, int anoPublicacion, String director, int duracion, String sinopsis, String url) {
         this.titulo = titulo;
-        this.puntuación = puntuación;
+        this.puntuacion = puntuacion;
         this.portadaId = portadaId;
         this.anoPublicacion = anoPublicacion;
         this.director = director;
@@ -35,6 +36,7 @@ public class Pelicula implements Serializable {
     public int getId() {
         return id;
     }
+
     public void setIdPlataforma(IdPlataforma id) {
         idPlataforma = id;
     }
@@ -47,8 +49,8 @@ public class Pelicula implements Serializable {
         return titulo;
     }
 
-    public int getPuntuación() {
-        return puntuación;
+    public int getPuntuacion() {
+        return puntuacion;
     }
 
     public int getPortada() {
