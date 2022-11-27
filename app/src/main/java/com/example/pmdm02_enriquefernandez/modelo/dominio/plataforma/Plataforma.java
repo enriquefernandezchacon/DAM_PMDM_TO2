@@ -36,6 +36,8 @@ public class Plataforma {
         return nombrePlataforma;
     }
 
+    public IdPlataforma getIdPlataforma() {return  id; }
+
     public int getImagenPlataformaId() {
         return imagenPlataformaId;
     }

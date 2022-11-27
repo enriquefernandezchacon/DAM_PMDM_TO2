@@ -2,9 +2,9 @@ package com.example.pmdm02_enriquefernandez.modelo.dominio;
 
 import com.example.pmdm02_enriquefernandez.modelo.dominio.plataforma.IdPlataforma;
 
-import java.util.Date;
+import java.io.Serializable;
 
-public class Pelicula {
+public class Pelicula implements Serializable {
 
     private int id;
     private String titulo;
@@ -70,4 +70,6 @@ public class Pelicula {
     public String getSinopsis() {
         return sinopsis;
     }
+
+    public String getUrl() { return url; }
 }

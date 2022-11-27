@@ -11,33 +11,54 @@
         android:src="@drawable/logo_color"
         android:contentDescription="@string/main_logo_content_description" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#FFFFFF">
+        android:layout_height="250dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="11dp"
-            android:gravity="center"
-            android:text="@string/dialogo_ayuda_titulo"
-            android:textColor="@color/secondary"
-            android:textSize="34sp"
-            android:textStyle="bold" />
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="11dp"
-            android:gravity="center"
-            android:text="@string/dialogo_ayuda_texto"
-            android:textColor="@color/primary"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="11dp"
+                android:gravity="center"
+                android:text="@string/dialogo_ayuda_titulo"
+                android:textColor="@color/secondary"
+                android:textSize="34sp"
+                android:textStyle="bold" />
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="11dp"
+                android:gravity="center"
+                android:text="@string/dialogo_ayuda_texto"
+                android:textColor="@color/primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dialogo_ayuda_presentacion"
+                android:gravity="center"
+                android:textColor="@color/primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />/>
+
+            <TextView
+                android:padding="20dp"
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dialogo_ayuda_loremipsun" />
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

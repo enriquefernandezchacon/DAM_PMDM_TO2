@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintPeliculaIndividual"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:padding="10dp"
+    android:background="@color/primary">
+
+        <ImageView
+            android:id="@+id/ivRVPortadaPelicula"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            android:contentDescription="Portada de la película"            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pelicula_bullet_train" />
+
+        <TextView
+            android:id="@+id/tvRVTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/wallpoet_regular"
+            android:text="TITULO"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/ivRVRating"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivRVPortadaPelicula" />
+
+        <ImageView
+            android:id="@+id/ivRVRating"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:contentDescription="Rating de la película"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/rating1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

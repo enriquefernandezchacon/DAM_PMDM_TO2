@@ -21,10 +21,6 @@
     <string name="menu_plataformas_historial">Historial</string>
     <string name="menu_plataformas_ayuda">Ayuda</string>
     <string name="menu_plataformas_acercade">Acerca De</string>
-    <string name="dialogo_acercade_datos_colegio">I.E.S Al-Ándalus\n2º DAM - Horas de Libre Configuración\nProfesor: Juan Pedro Martinez</string>
-    <string name="dialogo_acercade_nombre_autor">Enrique Octavio Fernández Chacón</string>
-    <string name="dialogo_ayuda_titulo">AYUDA</string>
-    <string name="dialogo_ayuda_texto">Si desea obtener ayuda\ncontáctenos a través\ndel correo:\nsoporte@piratestudio.com</string>
 
     <!--REGISTRO-->
     <string name="registro_titulo">Registro de usuario</string>
@@ -35,4 +31,23 @@
     <string name="registro_hint_confirmar_contrasena">Confirmar contraseña</string>
     <string name="registro_boton">REGISTRARSE</string>
 
+    <!--ACERCA DE-->
+    <string name="dialogo_acercade_datos_colegio">I.E.S Al-Ándalus\n2º DAM\n\nProgramación multimedia\ny\n dispositivos móviles\n\nProfesor: Sergio García Sanz</string>
+    <string name="dialogo_acercade_nombre_autor">Enrique Octavio Fernández Chacón</string>
+
+    <!--AYUDA-->
+    <string name="dialogo_ayuda_titulo">AYUDA</string>
+    <string name="dialogo_ayuda_texto">Si desea obtener ayuda\ncontáctenos a través\ndel correo:\nsoporte@piratestudio.com</string>
+    <string name="dialogo_ayuda_presentacion">A continuación te mostramos un texto inservible:</string>
+    <string name="dialogo_ayuda_loremipsun">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+        sunt in culpa qui officia deserunt mollit anim id est laborum\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+        sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+    <!--PELICULA ACTIVTY-->
+    <string name="pelicula_boton_reproducir">REPRODUCIR</string>
+    <string name="pelicula_titulo_sinopsis">SINOPSIS</string>
 </resources>

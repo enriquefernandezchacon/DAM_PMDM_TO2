@@ -32,7 +32,9 @@ public class PlataformasActivity extends AppCompatActivity {
         PlataformasAdapter.OnItemClickListener listener = new PlataformasAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Plataforma item) {
-                Toast.makeText(PlataformasActivity.this, item.getNombrePlataforma(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), ListadoPeliculasActivity.class);
+                intent.putExtra("PLATAFORMA", item.getIdPlataforma());
+                startActivity(intent);
             }
         };
 
